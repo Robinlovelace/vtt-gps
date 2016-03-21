@@ -1,8 +1,16 @@
 source("setup.R")
 # load shp data
+cways = shapefile("data/cycleway.shp")
+plot(cways)
+
+# itea data (not public)
 itea = shapefile("data/itea.shp")
+png("figures/initial-plot.png")
 plot(itea)
 names(itea)
+plot(cways, col = "red", add = T)
+# dir.create("figures")
+dev.off()
 
 # load gpx data
 # the file name (update as appropriate)
