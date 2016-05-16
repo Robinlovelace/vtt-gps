@@ -6,12 +6,14 @@ source("R/load-data.R")
 
 b = bb(i1)
 
-# create all highways
-h = extract_osm_objects(key = 'highway', bbox = b)
+# create all highways - enter ?extract_osm_objects
+h_secondary = extract_osm_objects(key = 'highway', value = "secondary",
+                        bbox = b)
+h = extract_osm_objects(key = 'highway', value = "secondary",
+                        bbox = b)
 
 # save 1 road type ???
 summary(h)
-h$
 
 plot(h)
 plot(i1, add = T, col = "red")
