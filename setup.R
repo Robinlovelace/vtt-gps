@@ -1,4 +1,6 @@
 # load libraries
-library(rgdal)
-library(tmap)
-library(raster)
+pkgs = c("rgdal", "tmap", "raster", "mapview")
+
+lapply(pkgs, library, character.only = T)
+
+
