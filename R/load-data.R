@@ -10,7 +10,10 @@ plot(itea)
 names(itea)
 plot(cways, col = "red", add = T)
 # dir.create("figures")
-dev.off()
+
+# focus on 1 route (to practice)
+i1 = itea[1,]
+mapview(i1)
 
 # load gpx data
 # the file name (update as appropriate)
